@@ -52,17 +52,6 @@ var addExcludedSite = function(site) {
 };
 
 /**
-    Disable script for entire server.
-*/
-var disableSite = function() {
-    chrome.tabs.query({currentWindow: true, active: true}, function(tabs) {
-        var url = getUrl(tabs[0].url)
-        addExcludedSite(url.hostname + '/*');
-    });
-    disable();
-};
-
-/**
     Disable script for current page.
 */
 var disablePage = function() {
