@@ -1,0 +1,22 @@
+body {
+    font-size: 13px;
+    margin: 0.2em 1em;
+    text-align: center;
+}
+
+label  {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2em;
+}
+
+.help-block {
+    font-style: italic;
+    line-height: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+.form-group {
+    margin-bottom: 0.2em;
+}

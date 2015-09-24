@@ -1,0 +1,34 @@
+.iiiii-reserved-word {
+    color: inherit;
+    text-decoration: none;
+}
+
+.iiiii-word {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.iiiii-word-inner {
+    color: transparent;
+    text-shadow: none;
+}
+
+.iiiii-override .iiiii-word,
+.iiiii-word:hover {
+    text-decoration: inherit;
+}
+
+.iiiii-override .iiiii-word-inner,
+.iiiii-word:hover .iiiii-word-inner {
+    color: inherit;
+    text-shadow: inherit;
+}
+
+
+.JTL a .iiiii-word,
+.JTL a .iiiii-word-inner,
+.JTL a .iiiii-reserved-word {
+    display: initial;
+    color: inherit;
+    text-decoration: inherit;
+}

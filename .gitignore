@@ -1,0 +1,44 @@
+*.prod.conf
+*.dev.conf
+
+# Project Files #
+.project
+node_modules
+_site
+.settings
+.idea
+
+# OS Files #
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+
+# Temp Files #
+*~
+*.tmp*
+*.orig
+*.cache
+*.log
+*~
+
+# Node Files #
+node_modules
+
+
+# Play! files #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.iml
+*.eml
+/dist/
+.cache
