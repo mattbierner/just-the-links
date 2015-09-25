@@ -1,0 +1,266 @@
+@import url(http://fonts.googleapis.com/css?family=Anton|Kaushan+Script|Amatic+SC|Coming+Soon);
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+}
+
+.ul {
+    text-decoration: underline;
+}
+
+.fullwidth-bar {
+    position: relative;
+    width: 100%;
+    border: none;
+}
+
+.fullwidth-bar:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -5000%;
+    width: 10000%;
+    height: 100%;
+    background: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    z-index: -1;
+}
+
+a {
+    color: #0091ff;
+}
+
+a:hover {
+    color: #0091ff;
+}
+
+/* Multiple underline
+ -----------------------------------------------------------------------------*/
+.multiunderline {
+    padding: 0 0.2em;
+    position: relative;
+    border-bottom: 2px solid #444;
+}
+
+.multiunderline:before,
+.multiunderline:after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    margin-left: -45%;
+    top: 8px;
+    width: 90%;
+    height: 100%;
+    border-bottom: inherit;
+}
+
+.multiunderline:after {
+    top: 14px;
+    width: 80%;
+    margin-left: -40%;
+    border-bottom: inherit;
+}
+
+/* Page Header
+ -----------------------------------------------------------------------------*/
+#header {
+    position: relative;
+    height: 60%;
+    max-height: 600px;
+    background-color: #663399;
+    background-image: url("../img/i.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    color: white;
+}
+
+#header #logo {
+    height: 100%;
+    display: table;
+}
+
+#header h1 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;    
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    font-weight: 300;
+    word-spacing: 0.05em;
+    font-family: 'Amatic SC', cursive;
+}
+#header h1 span {
+    display: inline-block;
+    text-align: center;
+}
+
+#header #title-left {
+    text-align: right;
+    padding-right: 16vh;
+}
+
+#header #title-right {
+    text-align: left;
+    padding-left: 16vh;
+}
+
+/* Article
+ -----------------------------------------------------------------------------*/
+article {
+    margin-top: 0.4em;
+    font-family: 'Coming Soon', cursive;
+}
+
+article blockquote,
+article textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+article h2,
+article h3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+article h4 {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
+article img {
+    max-width: 100%;
+}
+
+article img.screenshot {
+    margin-bottom: -3em;
+}
+
+article section,
+#page-footer {
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e3e3e3;
+}
+
+/* Example
+ -----------------------------------------------------------------------------*/
+#example textarea {
+    resize: vertical;
+    width: 100%;
+    min-height: 100px;
+}
+
+
+/* footer
+ -----------------------------------------------------------------------------*/
+#page-footer {
+    max-width: 60em;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    color: #ccc;
+} 
+
+#page-footer a {
+    color: inherit;
+}
+
+#page-footer nav {
+    padding-bottom: 1.6em;
+}
+
+/* iiIii
+ -----------------------------------------------------------------------------*/
+#example  .iiiii-reserved-word {
+    color: black;
+    text-decoration: none;
+}
+
+#example  .iiiii-word {
+    color: inherit;
+    text-decoration: underline;
+}
+
+#example .iiiii-word-inner {
+    color: transparent;
+    text-shadow: none;
+}
+
+#example .iiiii-word:hover {
+    text-decoration: inherit;
+}
+
+#example .iiiii-word:hover .iiiii-word-inner {
+    color: inherit;
+    text-shadow: inherit;
+}
+
+@media (max-height: 600px) {
+    article {
+        margin-top: 0;
+    }
+    
+    article h2,
+    article h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    article h4 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-height: 900px) {
+    #header #title-left {
+        padding-right: 150px;
+    }
+
+    #header #title-right {
+        padding-left: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    #header {
+        max-height: 40%;
+    }
+    
+    #header h1 {
+        font-size: 2em;
+    }
+    
+    #header #title-left {
+        padding-right: 8vh;
+    }
+
+    #header #title-right {
+        text-align: left;
+        padding-left: 8vh;
+    }
+
+    article img.screenshot {
+        margin-bottom: -1em;
+    }
+
+
+}
