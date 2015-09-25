@@ -1,4 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Anton|Kaushan+Script|Amatic+SC|Coming+Soon);
+@font-face {
+    font-family: 'Linux Libertine';
+    src: url(/fonts/LinLibertine_aS.ttf);
+}
+
+@keyframes fadeout {
+    from { color: initial; }
+    to { color: transparent; }
+}
+
+@keyframes fadeit {
+    from { color: transparent; }
+    to { color: initial; }
+}
 
 html, body {
     height: 100%;
@@ -13,7 +26,7 @@ html, body {
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
-    color: #444;
+    color: #252525;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,45 +64,12 @@ a:hover {
     color: #0091ff;
 }
 
-/* Multiple underline
- -----------------------------------------------------------------------------*/
-.multiunderline {
-    padding: 0 0.2em;
-    position: relative;
-    border-bottom: 2px solid #444;
-}
-
-.multiunderline:before,
-.multiunderline:after {
-    content: " ";
-    position: absolute;
-    left: 50%;
-    margin-left: -45%;
-    top: 8px;
-    width: 90%;
-    height: 100%;
-    border-bottom: inherit;
-}
-
-.multiunderline:after {
-    top: 14px;
-    width: 80%;
-    margin-left: -40%;
-    border-bottom: inherit;
-}
-
 /* Page Header
  -----------------------------------------------------------------------------*/
 #header {
     position: relative;
     height: 60%;
     max-height: 600px;
-    background-color: #663399;
-    background-image: url("../img/i.svg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    color: white;
 }
 
 #header #logo {
@@ -100,18 +80,13 @@ a:hover {
 #header h1 {
     display: table-cell;
     vertical-align: middle;
-    width: 50%;    
     margin: 0;
     padding: 0;
     font-size: 3em;
-    font-weight: 300;
     word-spacing: 0.05em;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Linux Libertine', serif;
 }
-#header h1 span {
-    display: inline-block;
-    text-align: center;
-}
+
 
 #header #title-left {
     text-align: right;
@@ -127,12 +102,7 @@ a:hover {
  -----------------------------------------------------------------------------*/
 article {
     margin-top: 0.4em;
-    font-family: 'Coming Soon', cursive;
-}
-
-article blockquote,
-article textarea {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 article h2,
