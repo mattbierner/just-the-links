@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Linux Libertine';
+    src: url(/fonts/LinLibertine_R.ttf);
+}
+
+@font-face {
+    font-family: 'Linux Libertine SmallCaps';
     src: url(/fonts/LinLibertine_aS.ttf);
 }
+
 
 @keyframes fadeout {
     from { color: initial; }
@@ -30,7 +36,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
+    font-family: 'Linux Libertine', serif;
 }
 
 .ul {
@@ -84,7 +90,7 @@ a:hover {
     padding: 0;
     font-size: 3em;
     word-spacing: 0.05em;
-    font-family: 'Linux Libertine', serif;
+    font-family: 'Linux Libertine SmallCaps', serif;
 }
 
 
@@ -101,12 +107,20 @@ a:hover {
 /* Article
  -----------------------------------------------------------------------------*/
 article {
+    text-align: left;
     margin-top: 0.4em;
     font-family: sans-serif;
+    max-width: 800px;
+}
+
+article h2 {
+    font-size: 21px;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.25em;
 }
 
 article h2,
-article h3 {
+article h3 {    
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -124,21 +138,34 @@ article img.screenshot {
     margin-bottom: -3em;
 }
 
-article section,
-#page-footer {
-    padding-top: 3rem;
-    margin-top: 3rem;
-    border-top: 1px solid #e3e3e3;
-}
 
-/* Example
+/* table-of-contents
  -----------------------------------------------------------------------------*/
-#example textarea {
-    resize: vertical;
-    width: 100%;
-    min-height: 100px;
+#table-of-contents {
+    display: table;
+    border: 1px solid #aaa;
+    background: #f9f9f9;
+    padding: 0.6em;
 }
 
+#table-of-contents > ol {
+    padding-left: 0;
+}
+
+#table-of-contents li {
+    list-style: none;
+
+}
+
+#table-of-contents h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: inherit;
+    margin: 0.5em 0;
+    padding: 0;
+    border: none;
+}
 
 /* footer
  -----------------------------------------------------------------------------*/
