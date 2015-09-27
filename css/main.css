@@ -36,7 +36,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Linux Libertine', serif;
+    font-family: inherit;
 }
 
 .ul {
@@ -114,15 +114,23 @@ article {
 }
 
 article h2 {
+    font-family: 'Linux Libertine', serif;
     font-size: 21px;
+    padding-top: 1em;
     border-bottom: 1px solid #aaa;
-    margin-bottom: 0.25em;
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 article h2,
 article h3 {    
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0.2rem;
+    clear: both;
 }
 
 article h4 {
@@ -136,6 +144,28 @@ article img {
 
 article img.screenshot {
     margin-bottom: -3em;
+}
+
+article figure {
+    display: block;
+    width: 256px;
+    float: right;
+    display: table;
+    border: 1px solid #aaa;
+    background: #f9f9f9;
+    padding: 0.6em;
+    margin-left: 2rem;
+}
+
+article figure.left {
+    float: left;
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+article figcaption {
+    font-size: 0.85em;
+    padding: 0.2em;
 }
 
 
