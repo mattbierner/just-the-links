@@ -78,9 +78,18 @@ a:hover {
     max-height: 600px;
 }
 
-#header #logo {
+#logo {
     height: 100%;
     display: table;
+    color: #252525;
+}
+
+#logo:hover {
+    text-decoration: none;
+}
+
+#logo:active {
+    color: #0091ff;
 }
 
 #header h1 {
@@ -216,29 +225,33 @@ article figcaption {
 
 /* iiIii
  -----------------------------------------------------------------------------*/
-#example  .iiiii-reserved-word {
-    color: black;
+.JTL .iiiii-reserved-word {
+    color: inherit;
     text-decoration: none;
 }
 
-#example  .iiiii-word {
+.JTL .iiiii-word {
     color: inherit;
     text-decoration: underline;
 }
 
-#example .iiiii-word-inner {
+.JTL .iiiii-word-inner {
     color: transparent;
     text-shadow: none;
 }
 
-#example .iiiii-word:hover {
+
+.JTL a .iiiii-word,
+.JTL .iiiii-word:hover,
+.JTL .iiiii-word:hover .iiiii-word-inner,
+.JTL a .iiiii-word-inner,
+.JTL a .iiiii-reserved-word {
+    display: initial;
+    color: inherit;
     text-decoration: inherit;
 }
 
-#example .iiiii-word:hover .iiiii-word-inner {
-    color: inherit;
-    text-shadow: inherit;
-}
+
 
 @media (max-height: 600px) {
     article {
@@ -267,26 +280,11 @@ article figcaption {
     }
 }
 
-@media (max-width: 400px) {
-    #header {
-        max-height: 40%;
-    }
-    
-    #header h1 {
-        font-size: 2em;
-    }
-    
-    #header #title-left {
-        padding-right: 8vh;
-    }
-
-    #header #title-right {
-        text-align: left;
-        padding-left: 8vh;
-    }
-
-    article img.screenshot {
-        margin-bottom: -1em;
+@media (max-width: 500px) {
+    article figure {
+        margin: 0 auto;
+        float: none;
+        text-align: center;
     }
 
 
