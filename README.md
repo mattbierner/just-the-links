@@ -1,9 +1,9 @@
 # Just the Links
 
-<figure align="right">  
+<div align="right">  
     <a href="https://chrome.google.com/webstore/detail/just-the-links/mbfccghgfekfafnjhlkfkfiolbplafpa"><img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.png" /></a>
-    <figcaption>Download for Chrome</figcaption>
-</figure>
+    <i>Download for Chrome</i>
+</div>
 
 Chrome Extension that rewrites Wikipedia to only show hyperlinks.
 
