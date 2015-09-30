@@ -1,15 +1,13 @@
 # Just the Links
 
-<div align="right">  
-    <a href="https://chrome.google.com/webstore/detail/just-the-links/mbfccghgfekfafnjhlkfkfiolbplafpa"><img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.png" /></a>
-    <i>Download for Chrome</i>
-</div>
-
 Chrome Extension that rewrites Wikipedia to only show hyperlinks.
-
 
 <img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/hyperlinks+break.png" />
 
+<a align="center" href="https://chrome.google.com/webstore/detail/just-the-links/mbfccghgfekfafnjhlkfkfiolbplafpa">
+    <div><img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.png" />
+    <i>Download for Chrome</i>
+</a>
 
 ## Options
 To change what text *Just the Links* displays or what site it runs on, go to the Chrome extension settings page or click on the *Just the Links* icon in the toolbar.
