@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Linux Libertine';
-    src: url(fonts/LinLibertine_R.ttf);
+    src: url(../fonts/LinLibertine_R.ttf);
 }
 
 @font-face {
     font-family: 'Linux Libertine SmallCaps';
-    src: url(fonts/LinLibertine_aS.ttf);
+    src: url(../fonts/LinLibertine_aS.ttf);
 }
 
 
