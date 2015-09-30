@@ -9,7 +9,7 @@ Chrome Extension that rewrites Wikipedia to only show hyperlinks.
     <div>
         <img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.png" />
     </div>
-    <i>Download for Chrome</i>
+    <div><i>Download for Chrome</i></div>
 </a>
 </div>
 
