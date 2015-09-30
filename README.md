@@ -1,6 +1,13 @@
 # Just the Links
 
+<figure align="right">  
+    <a href="https://chrome.google.com/webstore/detail/just-the-links/mbfccghgfekfafnjhlkfkfiolbplafpa"><img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.svg" /></a>
+    <figcaption>Download for Chrome</figcaption>
+</figure>
+
 Chrome Extension that rewrites Wikipedia to only show hyperlinks.
+
+
 
 <div align="center">
     <h4>Go from this:</h4>
@@ -8,6 +15,9 @@ Chrome Extension that rewrites Wikipedia to only show hyperlinks.
     <h4>To this:</h4>
     <img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/hyperlinks+break.png" />
 </div>
+
+
+
 
 
 ## Options
