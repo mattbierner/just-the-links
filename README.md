@@ -1,7 +1,7 @@
 # Just the Links
 
 <figure align="right">  
-    <a href="https://chrome.google.com/webstore/detail/just-the-links/mbfccghgfekfafnjhlkfkfiolbplafpa"><img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.svg" /></a>
+    <a href="https://chrome.google.com/webstore/detail/just-the-links/mbfccghgfekfafnjhlkfkfiolbplafpa"><img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/chrome.png" /></a>
     <figcaption>Download for Chrome</figcaption>
 </figure>
 
