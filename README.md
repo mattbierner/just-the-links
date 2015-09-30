@@ -14,7 +14,7 @@ Chrome Extension that rewrites Wikipedia to only show hyperlinks.
 </div>
 
 ## Options
-To change what text *Just the Links* displays or what site it runs on, go to the Chrome extension settings page or click on the *Just the Links* icon in the toolbar.
+To change what text *Just the Links* displays or what sites it runs on, go to the Chrome extension settings page or click on the *Just the Links* icon in the toolbar.
 
 <img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/click-options.png" />
 
