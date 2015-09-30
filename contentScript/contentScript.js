@@ -54,29 +54,46 @@ const notCommon = x => !common(x);
 const isReservedWord = (word, whitelistRegexp) =>
     word.match(whitelistRegexp);
     
-const rewritePage = function() {
+const rewritePage = (options) => {
     didExecute = true;
     var links = [];
     $(ROOT).addClass('JTL');
-      
+    
+    // Get all hyperlinks
     const targets = TOP_LEVEL_ELEMENTS.map(x => ROOT + " " + x); 
     $(targets.map(x => x + ' a').join()).each(function() {
         const text = $(this).text();
-        links.push(text);
+        links.push(text.trim());
     });
     
-    // Normalize and remove common words
-    links = flatten(links.map(link => {
-        const words = link.match(/\S+/g);
-        return words ? words.filter(notCommon) : [];
-    }));
+    // Just show hyperlinks
+    if (options.mode === 'hyperlinks') {
+        $(targets.join()).each(function() {
+            forEachTextNode($(this), function(node) {
+                node.replaceWith(`<span class="iiiii-word"><span class="iiiii-word-inner">${node.text()}</span></span>`);
+            });
+        });
+        
+        $(targets.join()).children('a .iiiii-word').addClass('iiiii-reserved-word');
+        
+    
+        return;
+    }
+    
+    if (options.mode === 'hyperlinks+break') {
+        // breakup hyperlinks
+        links = flatten(links.map(link => {
+            const words = link.match(/\S+/g);
+            return [link].concat(words ? words.filter(notCommon) : []);
+        }));
+    }
 
 
     const whitelistRegexp = createWhitelistRegexp(links);
     $(targets.join()).each(function() {
         forEachTextNode($(this), function(node) {
             node.replaceWith(
-                node.text().split(whitelistRegexp).map(function(word) {
+                node.text().split(whitelistRegexp).map(word => {
                     if (isReservedWord(word, whitelistRegexp)) {
                         return `<span class="iiiii-reserved-word">${word}</span>`;
                     } else {
@@ -91,7 +108,7 @@ const rewritePage = function() {
     Rewrite the current page.
 */
 const rewrite = (options) =>
-    $(() => rewritePage(options.elements, options.whitelist));
+    $(() => rewritePage(options));
 
 /**
     Toggle rewrites on or off. 
@@ -102,15 +119,17 @@ const toggle = () => {
     if (didExecute) {
         $(ROOT).toggleClass('JTL');
     } else {
-        rewrite();
+        chrome.runtime.sendMessage({method: "getOptions"}, rewrite);
     }
 };
 
 /**
     Should the page be rewritten?
 */
-const isTargetedPage = (options, location) => 
-    location.hostname.match(/\w+\.wikipedia\.org/);
+const isTargetedPage = (options, location) => { 
+    const sites = (options.sites || []).map(x => escapeRegexp(x).replace('\\*', '\\w'));
+    return location.hostname.match(new RegExp(sites.join('|'), 'i'));
+};
 
 /**
     Try to rewrite the current page.

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>i i I i i Options</title>
+    <title>Just the Links Options</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/options/options.css">
@@ -10,34 +10,23 @@
 <body>
     <form>
         <div class="form-group">
-            <label for="whitelist">Good Words</label>
-            <p id="whitelistHelp" class="help-block">
-                Comma separate list of words to ignore.</br>
-                Case insensitive. Can use regular expressions.
+            <label for="mode">Mode</label>
+             <p id="whitelistHelp" class="help-block">
+                What text should be displayed?
             <p>
-            <input id="whitelist"
-                class="form-control"
-                type="text"
-                aria-describedby="whitelistHelp"></input>
+            <select id="mode" class="form-control">
+                <option value="hyperlinks">Hyperlinks only</option>
+                <option value="hyperlinks+exact">Hyperlinks + exact matches</option>
+                <option value="hyperlinks+break">Hyperlinks + all words in the hyperlink</option>
+            </select>
         </div>
-    
+
         <div class="form-group">
-            <label for="elements">Elements</label>
+            <label for="sites">Site</label>
             <p id="elementsHelp" class="help-block">
-                CSS selector for elements to process.
+               Sites to process.  
             <p>
-            <input id="elements"
-                class="form-control"
-                type="text"
-                aria-describedby="elementsHelp"></input>
-        </div>
-        
-         <div class="form-group">
-            <label for="excluded-sites">Excluded Site</label>
-            <p id="elementsHelp" class="help-block">
-               Sites not to process. Add * as last path element to match all. 
-            <p>
-            <textarea id="excluded-sites"
+            <textarea id="sites"
                 class="form-control"
                 aria-describedby="elementsHelp"></textarea>
         </div>

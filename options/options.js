@@ -3,11 +3,8 @@
 */
 var saveOptions = function() {
     chrome.storage.sync.set({
-        'whitelist':  $('#whitelist').val().split(',').map(function(x) {
-            return x.trim();
-        }),
-        'elements': $('#elements').val(),
-        'excludedSites': $('#excluded-sites').val().split('\n').map(normalizeUrl)
+        'mode': $('#mode').val(),
+        'sites': $('#sites').val().split('\n').map(x => x.trim())
     });
 };
 
@@ -15,9 +12,8 @@ var saveOptions = function() {
     Update the UI from the options object.
 */
 var setOptions = function(options) {
-    $('#whitelist').val(options.whitelist.join(', '));
-    $('#elements').val(options.elements);
-    $('#excluded-sites').val(options.excludedSites.join('\n'))
+    $('#mode').val(options.mode);
+    $('#sites').val(options.sites.join('\n'))
 };
 
 /**
