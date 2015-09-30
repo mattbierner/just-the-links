@@ -8,16 +8,7 @@
 Chrome Extension that rewrites Wikipedia to only show hyperlinks.
 
 
-
-<div align="center">
-    <h4>Go from this:</h4>
-    <img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/before.png" />
-    <h4>To this:</h4>
-    <img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/hyperlinks+break.png" />
-</div>
-
-
-
+<img src="https://github.com/mattbierner/just-the-links/raw/master/documentation/hyperlinks+break.png" />
 
 
 ## Options
