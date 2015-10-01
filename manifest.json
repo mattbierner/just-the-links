@@ -4,7 +4,7 @@
     "name": "Just the Links",
     "description": "",
     "homepage_url": "http://mattbierner.github.io/just-the-links/",
-    "version": "1.0",
+    "version": "1.0.1",
     "icons": {
         "48": "icon48.png",
         "128": "icon128.png" },
