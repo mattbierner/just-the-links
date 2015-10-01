@@ -29,6 +29,7 @@ const escapeRegexp = (word) =>
 const createWhitelistRegexp = (whitelist) =>
     new RegExp(
         '\\b(' + whitelist
+	    .filter(x => x.length > 1)
             .map(escapeRegexp)
             .sort()
             .reverse()
@@ -52,7 +53,7 @@ const common = x =>
 const notCommon = x => !common(x);
 
 const isReservedWord = (word, whitelistRegexp) =>
-    word.match(whitelistRegexp);
+    word.length > 0 && word.match(whitelistRegexp);
     
 const rewritePage = (options) => {
     didExecute = true;
